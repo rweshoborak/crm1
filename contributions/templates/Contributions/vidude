@@ -1,0 +1,18 @@
+<p>Matumizi</p>
+{% for items in matumizi %}
+    {{items.title}} <br>
+    {{items.amount}}
+{%endfor%}
+<hr>
+<p>Fedha</p>
+{% for item in source %}
+    {{item.title}} <br>
+    {{item.amount}}
+{%endfor%}
+
+
+<h1> Jumla ya matumizi ni {{jumla.Amount}}</h1>
+<h1> Jumla ya mtaji ni {{Kiasi.Source}}</h1>
+<h1>Balance is: {{Kiasi.Source|sub:jumla.Amount}}</h1>
+
+ppoooooooooo {{balance}}
