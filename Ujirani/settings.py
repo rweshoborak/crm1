@@ -38,11 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-
     'contributions',
     'mathfilters',
     'crispy_forms',
@@ -85,10 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'matumizi',
-        'USER':'newuser',
-        'PASSWORD':'password',
-        'HOST':'',
-        'PORT':'',
+        'USER': 'newuser',
+        'PASSWORD': 'password',
+        'HOST': '',
+        'PORT': '',
 
     }
 }
@@ -111,6 +106,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SITE_ID=1
+
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -131,6 +128,7 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
@@ -138,29 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-SITE_ID = 1
 
-# provider specific settings
-# SOCIALACCOUNT_PROVIDERS = {
-#     'google': {
-#         # For each OAuth based provider, either add a ``SocialApp``
-#         # (``socialaccount`` app) containing the required client
-#         # credentials, or list them here:
-#         'APP': {
-#             'client_id': '123',
-#             'secret': '456',
-#             'key': ''
-#         }
-#     }
-# }
 
-ACCOUNT_FORMS = {
-    'login': 'allauth.account.forms.LoginForm',
-    'signup': 'allauth.account.forms.SignupForm',
-    'add_email': 'allauth.account.forms.AddEmailForm',
-    'change_password': 'allauth.account.forms.ChangePasswordForm',
-    'set_password': 'allauth.account.forms.SetPasswordForm',
-    'reset_password': 'allauth.account.forms.ResetPasswordForm',
-    'reset_password_from_key': 'allauth.account.forms.ResetPasswordKeyForm',
-    'disconnect': 'allauth.socialaccount.forms.DisconnectForm',
-}
+
+
