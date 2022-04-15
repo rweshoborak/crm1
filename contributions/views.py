@@ -62,7 +62,7 @@ def home(request):
     context = {
         "matumizi": matumizi,
         "source": fundSource,
-        "expences": totalexp,
+        "totalexp": totalexp,
         "totalinc": totalinc,
 
     }
