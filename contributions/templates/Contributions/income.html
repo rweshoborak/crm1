@@ -39,20 +39,15 @@
                                 <th>SN</th>
                                 <th>Title</th>
                                 <th>Amount</th>
-                                <th>Status</th>
                                 <th>Date</th>
                             </tr>
                         </thead>
-
-
-
                         <tbody>
                         {% for item in fundSource %}
                               <tr>
                                 <td>{{forloop.counter}}</td>
                                 <td>{{item.title}}</td>
                                 <td>{{item.amount}}</td>
-                                <td>{{item.status}}</td>
                                 <td>{{item.date_deposited}}</td>
                              </tr>
                          {%endfor%}

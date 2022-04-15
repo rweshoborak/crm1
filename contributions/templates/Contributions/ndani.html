@@ -19,7 +19,6 @@
                                 <th>SN</th>
                                 <th>Title</th>
                                 <th>Amount</th>
-                                <th>Status</th>
                                 <th>Date</th>
                             </tr>
                             </thead>
@@ -29,7 +28,6 @@
                                 <td>{{forloop.counter}}</td>
                                 <td>{{item.title}}</td>
                                 <td>{{item.amount}}</td>
-                                <td>{{item.status}}</td>
                                 <td>{{item.date_deposited}}</td>
                              </tr>
                                 {%endfor%}
@@ -78,7 +76,7 @@
                             </tbody>
                             <tr >
                                 <td colspan='2'></td>
-                                <td  colspan='3' class="text text-primary">Total: {{expences.amount|intcomma}}/=</td>
+                                <td  colspan='3' class="text text-primary">Total: {{totalexp.amount|intcomma}}/=</td>
                             </tr>
                         </table>
 
