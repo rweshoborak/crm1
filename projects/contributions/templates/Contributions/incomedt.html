@@ -1,0 +1,40 @@
+{%load humanize%}
+<!-- Source of income-->
+                <div class="col col-sm">
+
+                        <div class="card card-header ">
+                            <h1 class="text text-primary">Cash Source </h1>
+                        </div>
+
+                        <table  id="tabledata2" class="table table-striped border">
+                            <thead>
+                                <tr>
+                                <th>SN</th>
+                                <th>Title</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                {% for item in source %}
+                                 <tr>
+                                <td>{{forloop.counter}}</td>
+                                <td>{{item.title}}</td>
+                                <td>{{item.amount}}</td>
+                                <td>{{item.date_deposited}}</td>
+                             </tr>
+                                {%endfor%}
+                            </tbody>
+
+
+                            <tr >
+                                <td colspan='2'></td>
+                                <td  colspan='3' class="text text-primary">Total : {{totalinc.amount|intcomma}}/=</td>
+                            </tr>
+
+                    </table>
+
+
+
+                </div>
+<!--End of source of income-->

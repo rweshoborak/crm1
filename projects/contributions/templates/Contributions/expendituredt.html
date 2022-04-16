@@ -1,0 +1,39 @@
+{%load humanize%}
+<!--begin expenditure-->
+            <div class="col col-sm">
+
+                        <div class="card card-header ">
+                            <h1 class="text text-primary">Cash Expenditure </h1>
+                        </div>
+
+                        <table  id="tabledata" class="table table-striped table-bordered ">
+                            <thead>
+                                <tr>
+                                <th>SN</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                             </tr>
+                            </thead>
+                            <tbody>
+                            {%for exp in matumizi %}
+                            <tr>
+                                <td>{{forloop.counter}}</td>
+                                <td>{{exp.title}}</td>
+                                <td>{{exp.description}}</td>
+                                <td>{{exp.amount}}</td>
+                                <td>{{exp.created_at}}</td>
+                            </tr>
+                            {%endfor%}
+                            </tbody>
+                            <tr >
+                                <td colspan='2'></td>
+                                <td  colspan='3' class="text text-primary">Total: {{totalexp.amount|intcomma}}/=</td>
+                            </tr>
+                        </table>
+
+
+            </div>
+
+<!--End expenditure-->

@@ -7,7 +7,9 @@ urlpatterns = [
     path('Makusanyo', views.source, name='income'),
     path('matumizi', views.expenses, name='expenditure'),
 
-#     login
+
     path('login', views.loginUser, name='login'),
+    path('register', views.registrerPage, name='register'),
     path('logout', views.logoutUser, name='logout'),
 ]
+
