@@ -8,7 +8,6 @@ defusedxml==0.7.1
 Django==4.0
 django-ajax-datatable==4.4.3
 django-allauth==0.50.0
-django-ckeditor==3.6.2.1
 django-crispy-forms==1.14.0
 django-filter==21.1
 django-jazzmin==2.5.0
