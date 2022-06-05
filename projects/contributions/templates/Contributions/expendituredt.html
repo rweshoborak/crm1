@@ -21,7 +21,7 @@
                             <tr>
                                 <td>{{forloop.counter}}</td>
                                 <td>{{exp.title}}</td>
-                                <td>{{exp.description}}</td>
+                                <td>{{exp.description|safe}}</td>
                                 <td>{{exp.amount}}</td>
                                 <td>{{exp.created_at}}</td>
                             </tr>
