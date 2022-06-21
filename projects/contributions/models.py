@@ -25,8 +25,8 @@ class Category(models.Model):
 class Expenditure(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     title = models.CharField(max_length=255)
-    description = tinymce_models.HTMLField()
     amount = models.DecimalField(max_digits=25, decimal_places=2)
+    description = tinymce_models.HTMLField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

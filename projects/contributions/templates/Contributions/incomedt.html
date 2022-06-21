@@ -6,7 +6,7 @@
                             <h1 class="text text-primary">Cash Source </h1>
                         </div>
 
-                        <table  id="tabledata2" class="table table-striped border">
+                        <table  id="tabledata2" class="table">
                             <thead>
                                 <tr>
                                 <th>SN</th>
@@ -25,11 +25,11 @@
                              </tr>
                                 {%endfor%}
                             </tbody>
-
+                            <hr>
 
                             <tr >
                                 <td colspan='2'></td>
-                                <td  colspan='3' class="text text-primary">Total : {{totalinc.amount|intcomma}}/=</td>
+                                <td  colspan='3' class="text text-primary">Total : {{totalinc.jumla|intcomma}}/= </td>
                             </tr>
 
                     </table>

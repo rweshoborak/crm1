@@ -52,8 +52,7 @@ def home(request):
     matumizi = Expenditure.objects.all()
     fundSource = Source.objects.all()
     totalexp = matumizi.aggregate(amount=Sum('amount'))
-
-    totalinc = fundSource.aggregate(amount=Sum('amount'))
+    totalinc = fundSource.aggregate(jumla=Sum('amount'))
 
     context = {
         "matumizi": matumizi,
@@ -63,6 +62,8 @@ def home(request):
 
     }
     return render(request, 'Contributions/ndani.html', context)
+
+
 
 
 @login_required(login_url='contributions:login')
@@ -98,5 +99,6 @@ def source(request):
         'fundSource': fundSource[::-1],
         'srcform': sourcform,
         'totalinc': totalinc,
+
     }
     return render(request, 'Contributions/income.html', context)
