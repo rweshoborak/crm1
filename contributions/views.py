@@ -39,7 +39,6 @@ def loginUser(request):
         else:
             messages.info(request, "Usename OR Password is incorrect !!!")
 
-
     context = {}
     return render(request, 'Contributions/accounts/login.html', context)
 
@@ -56,8 +55,6 @@ def home(request):
     totalexp = matumizi.aggregate(amount=Sum('amount'))
 
     totalinc = fundSource.aggregate(amount=Sum('amount'))
-    print(f'{totalinc} the total incomw')
-    print(f'{totalexp} the total expences')
 
     context = {
         "matumizi": matumizi,
@@ -67,6 +64,7 @@ def home(request):
 
     }
     return render(request, 'Contributions/ndani.html', context)
+
 
 @login_required(login_url='contributions:login')
 def expenses(request):
@@ -86,6 +84,7 @@ def expenses(request):
     }
     return render(request, 'Contributions/expenditure.html', context)
 
+
 @login_required(login_url='contributions:login')
 def source(request):
     fundSource = Source.objects.all()
@@ -102,3 +101,5 @@ def source(request):
         'totalinc': totalinc,
     }
     return render(request, 'Contributions/income.html', context)
+
+
