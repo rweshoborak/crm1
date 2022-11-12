@@ -17,13 +17,12 @@ admin.site.register(Source, SourceAdmin)
 
 
 class ExpenditureAdmin(admin.ModelAdmin):
-    list_display = ['category','title','descriptions','amount']
-    list_filter = ['category','amount']
+    list_display = ['category', 'title', 'descriptions', 'amount']
+    list_filter = ['category', 'amount']
     list_display_links = ['title']
-    list_editable = ['category','amount']
+    list_editable = ['category', 'amount']
 
 
-admin.site.register(Expenditure,ExpenditureAdmin)
-
+admin.site.register(Expenditure, ExpenditureAdmin)
 
 admin.site.register(Category)

@@ -88,15 +88,16 @@ def expenses(request):
 @login_required(login_url='contributions:login')
 def source(request):
     fundSource = Source.objects.all()
-    totalinc = fundSource.aggregate(amount=Sum('amount'))
+    totalinc = fundSource.aggregate(jumla=Sum('amount'))
     sourcform = IncomeForm()
+
     if request.method == 'POST':
         sourcform = IncomeForm(request.POST)
         if sourcform.is_valid():
             sourcform.save()
             return redirect('contributions:nyumbani')
     context = {
-        'fundSource': fundSource[::-1],
+        'source': fundSource[::-1],
         'srcform': sourcform,
         'totalinc': totalinc,
 
