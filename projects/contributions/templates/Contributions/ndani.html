@@ -6,6 +6,11 @@
 <div class="card">
     <div class="card-body">
         <div class="row">
+             <h1>Balance is: {{totalinc.jumla|sub:totalexp.amount|intcomma}} /=</h1>
+
+
+          </div>
+        <div class="row">
 <!--            income begins -->
             {% include 'Contributions/incomedt.html'%}
 <!--            income ends-->
@@ -15,11 +20,7 @@
 
         </div>
         <hr>
-         <div class="row">
-             <h1>Balance is: {{totalinc.jumla|sub:totalexp.amount|intcomma}} /=</h1>
 
-
-          </div>
     </div>
 </div>
 
